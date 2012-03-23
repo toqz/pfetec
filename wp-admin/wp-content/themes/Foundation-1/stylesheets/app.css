@@ -1,0 +1,602 @@
+/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+.more-info,
+.more-info:hover {
+  background: url("../images/misc/icons-sprite.png") no-repeat scroll -72px -69px transparent;
+  color: #EA222A;
+  float: right;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  /*line-height: 160%;*/
+  font-size: 110%;
+  vertical-align: middle;
+}
+
+/* -----------------------------------------
+   Home
+----------------------------------------- */
+.banner h3{
+    color: #FFF;
+}
+
+.banner p{
+    color: #FFF;
+    font-size: 18px;
+    line-height:  26px;
+}
+
+.banner .row{
+    padding: 10px 0 10px;
+}
+
+
+.category{
+    
+}
+.category h2{
+    font-size: 215%;
+    color: #d13030;
+    font-weight: normal;
+}
+
+.category p{
+    color: #333;
+    font-size: 110%;
+    line-height: 130%;
+    margin-bottom: 30px;
+}
+
+.category .img-box{
+    background: #FFF;
+    padding: 3px 5px;
+    margin: 20px 0;
+    box-shadow: 3px 3px 3px #444;
+    text-align: center;
+}
+
+.footer .columns.first{
+  margin-left: 0;
+}
+.footer h5{
+    color: #FFF;
+    border-bottom: 1px solid #6b6b6b;
+    margin-bottom: 10px;
+}
+
+    .footer .whats-new .news-title{
+        color: #f53b3b;
+        font-size: 110%;
+        font-weight: bold;
+    }
+
+    .footer .whats-new p{
+        color: #FFF;
+        font-size: 100%;
+        margin-bottom: 0;
+    }
+    
+    .read-more, .read-more:hover{
+        color: #f53b3b;
+        float:right;
+        font-style: italic;
+        text-decoration: underline;
+        font-size: 110%;
+    }
+    
+    .footer .mail{
+        background-position: -39px -33px;
+    }
+    
+    
+    .footer .phone-num, .footer .mail-add{
+        line-height: 24px;
+        color: #FFF;
+        font-weight: bold;
+    }
+    
+    .footer .mail-add a{
+        color: #f53b3b;
+    }
+    
+    .footer .lbl-address{
+        background-position: -106px -100px;
+        float: left;
+    }
+    
+    .footer .address{
+        float:right;
+        color: #FFF;
+        line-height: 24px;
+    }
+    
+    .footer .copyright{
+        border-top: 1px solid #000000;
+        color: #454545;
+        margin-top: 10px;        
+        font-size: 80%;
+        padding-top: 10px;
+    }
+    
+    #footer-map{
+      width: 100%;
+      height: 140px;
+      margin-top: 30px;
+    }
+/* -----------------------------------------
+   Product
+----------------------------------------- */
+
+/* Product Banner
+	-------------------------------------------------- */
+	.product-banner{
+	  background: url("../images/misc/product-banner-bg.png") repeat-x left center;
+	  height:170px;
+	}
+	.product-banner .row{
+	  padding:20px 0;
+	  overflow:hidden;
+	}
+	.product-banner .row h3{
+	  font-size:200%;
+	  text-transform:uppercase;
+  }
+  .product-banner .row p{
+	  color: #FFF; 
+ 		font-size:140%;
+ 		line-height:140%;
+  }	
+
+/* Product Sidebar
+	-------------------------------------------------- */
+	.row .four.columns.sidebar{
+	  width:28.4%;
+	  margin-left:0;
+	}
+	.sidebar{
+	  padding-right:2%;
+	}
+	.sidebar .nav{}
+	.sidebar .nav .parent{}
+  .sidebar .nav ul.lvl-1{}
+  .sidebar a{
+    display:block;
+  }
+    
+  /**  First Level **/
+  .sidebar ul{
+    margin:0;padding:0;
+  } 
+  .sidebar ul li a:hover{
+    color:#D13030;
+  }
+  .sidebar ul.cat-brand > li > a{
+    font-size:120%;
+    font-weight:600;
+    padding:5px 0;
+    border-bottom:2px solid #d13030;
+    color: #d13030;
+  }
+  .sidebar ul.cat-brand > li > a.wpsc-current-cat{
+    background:url("../images/misc/icons-sprite.png") no-repeat scroll 65px -164px transparent;
+  }
+  
+  /** 2nd Level **/
+  .sidebar ul li{
+    margin-bottom:0;
+  }
+  .sidebar ul ul{
+    margin:7px 0 10px;
+    padding:0;    
+  }
+  .sidebar ul ul li{}
+  .sidebar ul ul li > a{
+    background: url("../images/misc/icons-sprite.png") no-repeat scroll 65px -164px
+  }
+  .sidebar ul ul li > a.selected{
+    background: url("../images/misc/icons-sprite.png") no-repeat scroll 32px -194px;
+  }
+  .sidebar ul ul li a{
+    color: #747474;
+    font-size: 120%;
+    border-bottom:1px dotted #747474;
+    line-height:200%;
+  }
+  .sidebar ul ul li a.selected{
+    color:#D13030;
+  }
+  /** 3rd Level **/    
+  .sidebar ul ul ul{
+    display:none;
+    margin:0 0 0 15px;
+    padding:0;    
+  }
+  .sidebar ul ul .wpsc-current-cat::after{
+    display:block;
+  }
+  .sidebar ul ul ul li a{
+    
+  } 
+    
+           
+/* Product Content
+	-------------------------------------------------- */
+  .content{
+    padding: 20px 0;
+  }
+  .product .sidebar{
+    
+  }
+  .product .row .eight.columns{
+    margin-left: 0;
+    padding-left: 4.4%;
+  }
+  .product .main{
+    background: url("../images/misc/sidebar-divider.png") repeat-y left top;
+    min-height:600px;
+  }
+  .product .main.product-list .product-list-thumb{
+    text-align:center;
+  }
+  .product .main.product-list h2{
+    background: url("../images/misc/horizontal-divider.png") repeat-x left bottom;
+    color:#666;
+    padding-bottom:10px;
+  }
+  .product-list .item{
+    background: url("../images/misc/product-list-border.png") repeat-x left bottom;
+    padding:15px 0;
+  }
+  .product-list .item a.wpsc_product_title,
+  .product-list .item a.wpsc_product_title:hover{
+    font-size:70%;
+    color:#666;
+  }
+  .product-list .item .wpsc_description{
+    font-size:110%;
+    line-height:150%;
+  }
+  .product-list .item .wpsc_description{
+    margin-bottom:20px;
+  }
+  .product-list .item .more-info{
+    margin-bottom: 0;
+    line-height: 160%;
+  }
+  /*Single Product*/
+  .product .single_product_display .product_image{
+    height:232px;
+  }
+  .product .single_product_display .single_additional_description{
+    margin-top: 15px;
+    background: url("../images/misc/product-list-border.png") repeat-x left bottom;
+  }
+  .product .single_product_display .single_additional_description p{
+    font-size: 120%;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    line-height: 140%;
+  }
+  
+  .product .single_product_display .row.product_description .columns{
+    padding:0 !important;
+  }
+  
+  .single_product_display .sub-info{
+    margin-bottom:30px;
+  }
+  
+  .single_product_display .sub-info .sub-info-list{
+    margin-bottom:0;
+  }
+  
+  .single_product_display .sub-info .sub-info-title,
+  .single_product_display .downloads .dl-title,
+  .single_product_display .videos .vid-title {
+    font-size: 140%;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .single_product_display .sub-title{
+    margin-bottom:10px;
+    font-style:italic;
+  }
+  .single_product_display .sub-info ul{}
+  .single_product_display .sub-info ul li {
+    margin-bottom: 0;
+    line-height: 160%;
+    font-size: 110%;
+  }
+  .single_product_display .sub-info p{
+    line-height: 140%;
+    font-family: 'Istok Web', sans-serif;
+    font-size: 110%;
+  }
+  .single_product_display .sub-info ul li::before{
+    content: "- ";
+  }
+  .single_product_display .sub-info dl{
+    font-size: 110%;
+    line-height: 160%;
+    margin-bottom:15px;
+  }
+  .single_product_display .sub-info dl dt{
+    float: left;
+    font-weight: bold;
+  }
+  .single_product_display .downloads a.dl-pdf,
+  .single_product_display .downloads a.dl-pdf:hover{
+    background: url("../images/misc/pdf.png") no-repeat left top;
+    outline: none;
+    padding-left: 36px;
+    display: block;
+    height: 35px;
+    vertical-align: baseline;
+    line-height: 36px;
+    font-size: 110%;
+    color: #333;
+  }
+  .single_product_display .videos .video-link{
+    display: block;
+    height: 126px;
+    background: url("../images/misc/video-icon.png") no-repeat left top;
+    width: 100%;
+  }
+  
+  /* Breadcrumbs */
+  .content.product .wpsc-breadcrumbs{
+    border-bottom:1px dotted #747474;
+    padding-bottom:5px;
+    margin-bottom:15px;
+  }
+  .wpsc-breadcrumbs .wpsc-crumb,
+  .wpsc-breadcrumbs .wpsc-crumb:hover{
+    color:#333;
+    font-weight:bold;
+  }
+  .wpsc-breadcrumbs .wpsc-crumb{
+    text-decoration:none;
+  }
+  .wpsc-breadcrumbs .wpsc-crumb:hover{
+    text-decoration:underline;
+  }
+  .wpsc-breadcrumbs .wpsc-crumb.current_crumb{
+    color: #999;
+  }
+  .wpsc-breadcrumbs .wpsc-crumb.current_crumb:hover{
+    text-decoration:none;
+  }
+  
+/* Static Content
+	-------------------------------------------------- */ 
+  .content{
+    padding: 20px 0;
+  }
+  .static-content .page-content{
+    margin-bottom:70px;
+  }
+	.static-content .row .eight.columns{
+    margin-left: 0;
+    padding-left: 4.4%;	  
+	}
+	.static-content .main{
+	  background: url("../images/misc/sidebar-divider.png") repeat-y left top;
+    min-height:600px;
+	}
+	.static-content .main h2{
+    color:#D13030;
+    font-size: 200%;
+  }
+  
+  .static-content .company{}
+  
+  .static-content .bio{}
+  .static-content .bio .name,
+  .static-content .bio .position{
+    color:#666;
+    display: block;
+  }
+  .static-content .bio .name{
+    font-size: 170%;
+  }
+  .static-content .bio .position{
+    font-size: 120%;
+    margin-bottom: 30px;
+  }
+  .static-content .bio .info{
+    padding-bottom:20px;
+    border-bottom:1px dotted #747474;
+    margin-bottom:30px;
+  }
+  .static-content .bio .info.last{
+    border:0 none;
+  }
+  .static-content .supplier{
+    margin-bottom:30px;
+  }
+  .static-content .supplier .supplier-name{
+    color:#D13030;
+    font-size: 200%;
+  }
+  
+  /* NEWS */
+	.content.news{
+	  
+	}
+	  
+	.content.news .article h2 a,
+	.content.news .article h2 a:hover{
+	  color: #666;
+	}
+	.content.news .article .news-summary,
+	.content.news .article .news-full p{
+  	font-size: 140%;
+    line-height: 140%;
+  }
+  
+	/* Contact */
+	.content.contact h2{
+	  font-size: 150%;
+	  color:#666;
+	}
+	.content.contact p{
+	  font-size: 110%;
+	}
+	.content.contact .contact-map{
+	  box-shadow: 0 0 3px #AAA;
+    width: 461px;
+    height: 317px;
+    padding: 1px;
+	}
+	.content.contact p span.red-text{
+	  font-size:100%;
+	  color:#e83a3a;
+	}
+	.row.contact-footer{
+	  margin-top:15px;
+	}
+	.footer .phone, .footer .mail, .footer .lbl-address,
+  .contact .phone, .contact .mail, .contact .lbl-address {
+    background: url("../images/misc/icons-sprite.png") no-repeat scroll -7px -8px transparent;
+    color: #898989;
+    display: block;
+    font-style: italic;
+    line-height: 24px;
+    padding-left: 24px;
+    text-decoration: none;
+  }
+  .contact .phone{
+    background-position: -264px -229px;
+    text-decoration:;
+  }
+  .contact .phone .phone-num,
+  .contact .mail .mail-add{
+    font-style: normal;
+    font-size: 110%;
+    color: #666;
+    font-weight:bold;
+    float: right;
+  }
+  .contact .mail .mail-add{
+    color:#f53b3b;
+  }
+  
+  .contact .mail {
+    background-position: -296px -262px;
+  }
+  
+  /* Contact Form */
+  .content.contact .row{
+    padding: 20px 0;
+  }
+	.content.contact form p{
+	  font-size: 140%;
+    line-height: 140%;
+	}
+	.content.contact form p input.txt-input,
+	.content.contact form p textarea{
+	  background:#f1f1f1;
+	  font-size: 75%;
+	  padding:10px 5px;
+	  color:#999;
+	  font-style:italic;
+	  width: 100%;
+	}
+	.content.contact form p .txt-input.captcha{
+  	display: inline-block;
+    width: auto;
+  }
+	.content.contact form p input.btn-send{
+  	float: right;
+    padding: 9px 10px 11px;
+    width: 90px;
+    cursor:pointer;
+  }
+  
+  .content.contact form p .wpcf7-not-valid-tip-no-ajax {
+    display: block;
+    font-size: 70%;
+    color: #E83A3A;
+    font-style: italic;
+  }
+	
+	.content.contact form .wpcf7-validation-errors{
+    font-size: 100%;
+    color: #E83A3A;
+    font-style: italic;
+	}
+
+/* Product Description Table */
+.product_description table{
+  background:transparent;
+  border: 1px inset #CCC;
+}
+
+.product_description table tr th{
+  padding: 9px 10px;
+  font-weight:bold;
+}
+
+/*  Products Home Page */
+.postid-523 .catergory-list .brand-logo{
+  margin: 0 0 30px 0;
+}
+  
+/*VideoPlayer */
+.overlay {
+  display:none;
+  z-index: 1000;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: black;
+  cursor: default;
+  position: fixed;
+  opacity: 0.6;
+}
+.videoContainer {
+  display:none;
+  z-index: 1001;
+  position: fixed;
+  padding: 0px;
+  margin: 0px;
+  width: 480px;
+  height:360px;
+  top: 20%;
+  left: 35%;
+  text-align: center;
+  color: black;
+  border: 3px solid #AAA;
+  border-image: initial;
+  background-color: white;
+  cursor: wait;
+}
+.videoContainer .video{
+  width: 480px;
+  height:360px;
+}
+.close-btn{
+  display: block;
+  background: url("../images/misc/close-x.png") no-repeat left top;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
