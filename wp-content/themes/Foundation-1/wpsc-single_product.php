@@ -66,10 +66,6 @@
                               
 						  foreach( $downloadables as $downloadable ){
 						    
-                // echo '<pre>';
-                // var_dump ( $downloadable );
-                // echo '</pre>';
-
                   $pattern_tds = '/^tds-/i';
                   $pattern_msds = '/^msds-/i';
                   $pattern_cert = '/^cert-/i';
@@ -92,16 +88,17 @@
                     if( preg_match($pattern_cert, $downloadable['post_title'] ) ){
                       $cert_html .= "<li><a href=\"". $downloadable['guid'] ."\" target=\"_blank\" class=\"dl-pdf\" >CERTIFICATE</a></li>";
                     }
-                    
-                    $pdf_html .= '<div class="four columns">';
-                    $pdf_html .= '<div class="downloads"><p class="dl-title">Downloads</p><ul>';
-                    $pdf_html .= $tds_html . $msds_html . $cert_html;
-                    $pdf_html .= '</ul></div></div>';
                   }
 						  }
 						  
-						  echo $pdf_html;
-						  
+              if ( count($downloadables) > 0 ){
+                $pdf_html .= '<div class="four columns">';
+                $pdf_html .= '<div class="downloads"><p class="dl-title">Downloads</p><ul>';
+                $pdf_html .= $tds_html . $msds_html . $cert_html;
+                $pdf_html .= '</ul></div></div>';
+                echo $pdf_html;
+              }
+
 						  ?>
 							<!-- End Downloadables -->
 							

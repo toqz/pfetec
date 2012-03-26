@@ -29,7 +29,7 @@
                             <div class="six columns">
                                 <div class="phone-num">+65 6558 6388</div>
                                 <div class="phone-num">+65 6558 7310</div>
-                                <div class="mail-add"><a href="mailto:sales@pfetec.com?Subject=Hello">sales@pfetec.com</a></div>
+                                <div class="mail-add"><a href="mailto:info@pfetec.com?Subject=Hello">sales@pfetec.com</a></div>
                                 <div class="mail-add"><a href="mailto:info@pfetec.com?Subject=Hello">info@pfetec.com</a></div>
                             </div>
                         </div>

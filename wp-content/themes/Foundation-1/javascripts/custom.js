@@ -9,30 +9,8 @@
   // Document Ready
   $(function(){
     
-    // hide default category
-    $('.wpsc_category_link[title="default"]').parent('li').remove();
-    
-    // sidemenu
-    var currCat =  $('ul ul .wpsc-current-cat');
-    if( currCat.length > 0 ){
-      currCat.addClass('selected')
-      if( currCat.next().length > 0 ){
-        currCat.addClass('selected').next().show();
-      }else{
-        currCat.css({'backgroundPosition':'65px -164px'});
-      }
-    }
-    
-    var currSubcat =  $('ul ul ul .wpsc-current-cat');
-    if( currSubcat.length > 0 ){
-      var container = currSubcat.parents('ul').first();
-      container.show();
-      currSubcat.addClass('selected');
-      container.parent().children('a').addClass('selected');
-    }
-    
-    // remove primary category hyperlinks
-    $('ul.cat-brand > li > a').attr('href', 'javascript:void(0);').css({'pointer':'default'});
+    // Sidemenu
+    $('ul.wpsc_categories').formatSidemenu();
      
      //Breadcrumbs
      var crumb = $('.wpsc-breadcrumbs a');
@@ -68,10 +46,71 @@
       $('.wpsc_category_grid_item[title="default"]').parent().remove()
     }
     
-    
   });
   
 
   
 })(jQuery);
 
+(function ($) {
+  $.fn.formatSidemenu = function(options){
+    var defaults={};
+    var opts = $.extend(defaults, options);
+    return this.each(function(){
+      var _nav = $(this);
+  
+      if( typeof _nav=='undefined' || _nav=='' || _nav===null || _nav.length===0 ){
+        return false;
+      }
+    
+      hideOtherCategory(_nav);
+      removeHyperlinks(_nav);
+      accordion(_nav);
+      categoryOrder(_nav);
+    });
+  };
+  
+  var hideOtherCategory = function(_nav){
+    _nav.find('.wpsc_category_link[title="default"]').parent('li').remove();
+  }
+  
+  var removeHyperlinks = function(_nav){
+    _nav.children('li').children('a').attr('href', 'javascript:void(0);').css({'pointer':'default'});
+  }
+  
+  var accordion = function(_nav){
+    var currCat = _nav.find('ul .wpsc-current-cat');
+    if( currCat.length > 0 ){
+      currCat.addClass('selected')
+      if( currCat.next().length > 0 ){
+        currCat.addClass('selected').next().show();
+      }else{
+        currCat.css({'backgroundPosition':'65px -164px'});
+      }
+    }
+    
+    var currSubcat =  _nav.find('ul ul .wpsc-current-cat');
+    if( currSubcat.length > 0 ){
+      var container = currSubcat.parents('ul').first();
+      container.show();
+      currSubcat.addClass('selected');
+      container.parent().children('a').addClass('selected');
+    }
+  }
+  
+  var categoryOrder = function(_nav){
+    var order = ['pereseal','soudal','klingspor','vogel'],
+      len = order.length,
+      arrCats = _nav.children(),
+      orderedCats=[];
+    
+    for(i=0; i<len; i++){
+      $.each(arrCats, function(k, v){
+         var cat = $(v).children('.wpsc_category_link').attr('title');
+         if( cat.toLowerCase()==order[i].toLowerCase() ){
+           _nav.append(v);
+         }
+       });
+    }
+  }
+})(jQuery);
