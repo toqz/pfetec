@@ -78,7 +78,7 @@
                     
                     // TDS
                     if( preg_match($pattern_tds, $downloadable['post_title'] ) ){
-                      $tds_html .= "<li><a href=\"". $downloadable['guid'] ."\" class=\"dl-pdf\">Technical Data Sheet</a></li>";
+                      $tds_html .= "<li><a href=\"". $downloadable['guid'] ."\" class=\"dl-pdf\" target=\"_blank\">Technical Data Sheet</a></li>";
                     }
                     // MSDS
                     if( preg_match($pattern_msds, $downloadable['post_title'] ) ){
