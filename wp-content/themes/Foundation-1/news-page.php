@@ -1,8 +1,8 @@
 <div class="product-banner">    
   <div class="row">
     <div class="twelve columns">
-      <h3>News</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec dui urna. Integer vel arcu id nisi aliquet lobortis non sit amet tellus. Nunc in ultricies ligula. Vestibulum id nunc et leo laoreet aliquet sit amet non lectus. Curabitur ac diam odio, in pretium est. </p>
+      <h3>Latest News</h3>
+      <p>Latest News Headlines</p>
     </div>
   </div>
 </div>
@@ -34,10 +34,6 @@
 
     </div>
     <!-- End: eight columns -->
-    
-    <div class="four columns">
-      <?php include('sidebar-news.php'); ?>
-    </div>
    
   </div>
   <!-- End: row news -->

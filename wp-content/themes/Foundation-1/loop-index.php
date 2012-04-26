@@ -50,9 +50,9 @@
 	  </div>
 	  <!-- End: Left Column -->
 	
-	  <div class="four columns">
-	    <?php include('sidebar-news.php'); ?>
-	  </div>
+    <!-- <div class="four columns">
+      <?php include('sidebar-news.php'); ?>
+    </div> -->
 	  <!--End: Right Column-->
 	  
 	</div>

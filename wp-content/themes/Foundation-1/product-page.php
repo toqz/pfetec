@@ -7,7 +7,7 @@
       <div class="row">
           <div class="twelve columns">
               <h3>Products</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec dui urna. Integer vel arcu id nisi aliquet lobortis non sit amet tellus. Nunc in ultricies ligula. Vestibulum id nunc et leo laoreet aliquet sit amet non lectus. Curabitur ac diam odio, in pretium est. </p>    
+              <!-- <p><?php the_title(); ?></p>   -->  
           </div>
       </div>
   </div>

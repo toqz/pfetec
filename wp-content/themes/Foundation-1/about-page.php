@@ -6,8 +6,8 @@
         <div class="twelve columns">
             <?php //if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>  
 
-            <h3><?php the_title(); ?></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec dui urna. Integer vel arcu id nisi aliquet lobortis non sit amet tellus. Nunc in ultricies ligula. Vestibulum id nunc et leo laoreet aliquet sit amet non lectus. Curabitur ac diam odio, in pretium est. </p>   
+            <h3>About Us</h3>
+            <p><?php the_title(); ?> </p>   
 
             <?php// endif; ?> 
 

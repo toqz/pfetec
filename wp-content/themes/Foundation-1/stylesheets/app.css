@@ -156,8 +156,19 @@
 	  color: #FFF; 
  		font-size:140%;
  		line-height:140%;
-  }	
+  }
+  
+  .product-banner .row p q{
+    font-style:italic;
+  }
+  .product-banner .row p q:before{	
+    content:'" ';
+  }
+  .product-banner .row p q:after{	
+    content:' "';
+  }
 
+  
 /* Product Sidebar
 	-------------------------------------------------- */
 	.row .four.columns.sidebar{

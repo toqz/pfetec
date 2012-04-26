@@ -1,10 +1,20 @@
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<div class="product-banner">    
+  <div class="row">
+    <div class="twelve columns">
+      <h3>News Detail</h3>
+      <p>Latest News Headlines</p>
+    </div>
+  </div>
+</div>  
+  
 <div class="content news">
   <div class="row">
     
     <div class="eight columns">
       
       <!-- Start the Loop -->
-    	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    	
 
     		<!-- Begin the first article -->
     		<div class="article">
@@ -32,23 +42,26 @@
     	    <?php comments_template( '', true ); ?>
     	    <!-- End Comments -->
 
-    	<!-- Stop The Loop (but note the "else:" - see next line). -->
-    	<?php endwhile; else: ?>
-
-    		<!-- The very first "if" tested to see if there were any Posts to -->
-    		<!-- display.  This "else" part tells what do if there weren't any. -->
-    		<div class="alert-box error">Sorry, no posts matched your criteria.</div>
-
-    	<!--End the loop -->
-    	<?php endif; ?>
     	
-    </div>
-    <!-- End: Left Columns -->
-    
-    <div class="four columns">
-      <?php include('sidebar-news.php'); ?>
+    	
     </div>
     <!-- End: Left Columns -->
     
   </div>
 </div>
+
+<!-- Stop The Loop (but note the "else:" - see next line). -->
+<?php endwhile; else: ?>
+<div class="content news">
+  <div class="row">
+
+    <div class="eight columns">
+      
+    	<!-- The very first "if" tested to see if there were any Posts to -->
+    	<!-- display.  This "else" part tells what do if there weren't any. -->
+    	<div class="alert-box error">Sorry, no posts matched your criteria.</div>
+    </div>
+  </div>
+</div>
+<?php endif; ?>
+<!--End the loop -->
