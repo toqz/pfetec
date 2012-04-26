@@ -260,6 +260,9 @@
   .product .main.product-list .product-list-thumb{
     text-align:center;
   }
+  .product .main.product-list .product-list-thumb img{
+    margin: 7px;
+  }
   .product .main.product-list h2{
     background: url("../images/misc/horizontal-divider.png") repeat-x left bottom;
     color:#666;
@@ -268,7 +271,16 @@
   .product-list .item{
     background: url("../images/misc/product-list-border.png") repeat-x left bottom;
     padding:15px 0;
+    min-height: 156px;
   }
+  .product-list .item:hover{
+    background: #f1f1f1;
+  }
+  
+  .product-list .item .productcol{
+    margin-right: 15px;
+  }
+  
   .product-list .item a.wpsc_product_title,
   .product-list .item a.wpsc_product_title:hover{
     font-size:70%;

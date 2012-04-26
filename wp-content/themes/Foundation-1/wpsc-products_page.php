@@ -11,6 +11,7 @@ $image_width = get_option('product_image_width');
 	
 	<?php do_action('wpsc_top_of_products_page'); // Plugin hook for adding things to the top of the products page, like the live search ?>
 	
+  <!-- Begin: Sidebar -->
 	<?php if(wpsc_display_categories()): ?>
 	  <?php if(wpsc_category_grid_view()) :?>
 			<div class="wpsc_categories wpsc_category_grid group">
@@ -28,38 +29,30 @@ $image_width = get_option('product_image_width');
 		
 		<?php endif; ?>
 	<?php endif; ?>
+	<!-- End: Sidebar -->
+	
 <?php // */ ?>
 	
 	<?php if(wpsc_display_products()): ?>
 		
-		<?php if(wpsc_is_in_category()) : ?>
-			<div class="wpsc_category_details">
-				<?php if(wpsc_show_category_thumbnails()) : ?>
-					<img src="<?php echo wpsc_category_image(); ?>" alt="<?php echo wpsc_category_name(); ?>" />
-				<?php endif; ?>
-				
-				<?php if(wpsc_show_category_description() &&  wpsc_category_description()) : ?>
-					<?php echo wpsc_category_description(); ?>
-				<?php endif; ?>
-			</div><!--close wpsc_category_details-->
-		<?php endif; ?>
-		
-		
-	
 		<div class="eight columns main product-list">
-		<!-- <h2><?php the_title(); ?></h2> -->
 		
+    <!-- Begin: Top pagination -->
 		<?php if(wpsc_has_pages_top()) : ?>
+		<div class="pagination clearfix">
 			<div class="wpsc_page_numbers_top">
 				<?php wpsc_pagination(); ?>
-			</div><!--close wpsc_page_numbers_top-->
+			</div>
+		</div>
 		<?php endif; ?>
+		<!-- End: Top pagination -->
 		
-		<?php /** start the product loop here */?>
+    <!-- Begin: Products List -->
 		<?php while (wpsc_have_products()) :  wpsc_the_product(); ?>
 			
-			<div class="row item">
-			  
+			<div class="row item" data-product-link="<?php echo wpsc_the_product_permalink(); ?>">
+			    
+        <!-- Begin: Product thumbnail -->
 				<?php if(wpsc_show_thumbnails()) :?>
 					<div class="three columns product-list-thumb">
 						<?php if(wpsc_the_product_thumbnail()) :
@@ -70,49 +63,30 @@ $image_width = get_option('product_image_width');
 						<?php else: ?>
 								<img class="no-image" id="product_image_<?php echo wpsc_the_product_id(); ?>" alt="No Image" title="<?php echo wpsc_the_product_title(); ?>" src="<?php echo WPSC_CORE_THEME_URL; ?>wpsc-images/noimage.png" width="<?php echo get_option('product_image_width'); ?>" height="<?php echo get_option('product_image_height'); ?>" />	
 						<?php endif; ?>
-						<?php
-						if(gold_cart_display_gallery()) :					
-							echo gold_shpcrt_display_gallery(wpsc_the_product_id(), true);
-						endif;
-						?>	
-					</div><!--close imagecol-->
+					</div>
 				<?php endif; ?>
+				<!-- End: Product thumbnail -->
 				
+        <!-- Begin: Product Details -->
 			  <div class="nine columns">
-			    
-				  <h3>
-						<?php if(get_option('hide_name_link') == 1) : ?>
-							<?php echo wpsc_the_product_title(); ?>
-						<?php else: ?> 
-							<a class="wpsc_product_title" href="<?php echo wpsc_the_product_permalink(); ?>"><?php echo wpsc_the_product_title(); ?></a>
-						<?php endif; ?>
-					</h3>				
-				
+				  <h3><?php echo wpsc_the_product_title(); ?></h3>
 					<div class="productcol">
-					
-						<?php							
+						<?php
 							do_action('wpsc_product_before_description', wpsc_the_product_id(), $wp_query->post);
 							do_action('wpsc_product_addons', wpsc_the_product_id());
 						?>
-
-				    <?php if ( wpsc_the_product_additional_description() ) : ?>
-							<div class="wpsc_description">
-								<?php echo wpsc_the_product_additional_description(); ?>
-							</div><!--close sub description-->
-						<?php endif; ?>
+						
+						<div class="wpsc_description">
+							<?php echo wpsc_the_product_additional_description(); ?>
+						</div>
 				    
 				    <a class="more-info" href="<?php echo wpsc_the_product_permalink(); ?>">View Details</a>
 				    
-						<?php if(wpsc_product_external_link(wpsc_the_product_id()) != '') : ?>
-							<?php $action =  wpsc_product_external_link(wpsc_the_product_id()); ?>
-						<?php else: ?>
-						<?php $action = htmlentities(wpsc_this_page_url(), ENT_QUOTES, 'UTF-8' ); ?>					
-						<?php endif; ?>					
 						<form class="product_form"  enctype="multipart/form-data" action="<?php echo $action; ?>" method="post" name="product_<?php echo wpsc_the_product_id(); ?>" id="product_<?php echo wpsc_the_product_id(); ?>" >
 						<?php do_action ( 'wpsc_product_form_fields_begin' ); ?>
 						<?php /** the variation group HTML and loop */?>
                         <?php if (wpsc_have_variation_groups()) { ?>
-                        <fieldset><legend><?php _e('Product Options', 'wpsc'); ?></legend>
+            <fieldset><legend><?php _e('Product Options', 'wpsc'); ?></legend>
 						<div class="wpsc_variation_forms">
                         	<table>
 							<?php while (wpsc_have_variation_groups()) : wpsc_the_variation_group(); ?>
@@ -152,17 +126,11 @@ $image_width = get_option('product_image_width');
 							<?php do_action ( 'wpsc_product_form_fields_end' ); ?>
 						</form><!--close product_form-->
 						
-						<?php if((get_option('hide_addtocart_button') == 0) && (get_option('addtocart_or_buynow')=='1')) : ?>
-							<?php echo wpsc_buy_now_button(wpsc_the_product_id()); ?>
-						<?php endif ; ?>
-						
 						<?php echo wpsc_product_rater(); ?>
-						
-						
+											
 					<?php // */ ?>
 				</div><!--close productcol-->
 			</div><!--eight column-->
-			
 			
 			<?php if(wpsc_product_on_special()) : ?><span class="sale"><?php _e('Sale', 'wpsc'); ?></span><?php endif; ?>
 		</div><!--close item-->
@@ -170,19 +138,24 @@ $image_width = get_option('product_image_width');
 		<?php endwhile; ?>
 		
 		<?php /** end the product loop here */?>
-		
+
 		<?php if(wpsc_product_count() == 0):?>
 			<h3><?php  _e('There are no products in this group.', 'wpsc'); ?></h3>
 		<?php endif ; ?>
+	    
 	    <?php do_action( 'wpsc_theme_footer' ); ?> 	
-
+      
+    <!-- Begin: Pagination Bottom -->
 		<?php if(wpsc_has_pages_bottom()) : ?>
-			<div class="wpsc_page_numbers_bottom">
-				<?php wpsc_pagination(); ?>
-			</div><!--close wpsc_page_numbers_bottom-->
+		<div class="pagination clearfix">
+  		<div class="wpsc_page_numbers_bottom">
+  			<?php wpsc_pagination(); ?>
+  		</div>
+    </div>
 		<?php endif; ?>
+		<!-- End: Pagination Bottom -->
 		
-		</div>
+	</div>
 		
 	<?php endif; ?>
 </div><!--close default_products_page_container-->

@@ -46,9 +46,36 @@
       $('.wpsc_category_grid_item[title="default"]').parent().remove()
     }
     
+    initVideos();
   });
   
-
+  // Init product videos
+  var initVideos = function(){
+    // alert('initVideos')
+    var videos = $('[data-video-src]');
+    videos.each(function(i, v){
+      $(v).click(function(){
+        var vidLink = $(this).data('videoSrc')
+        var vidWrapper = $('<iframe width="640" height="480" frameborder="0" allowfullscreen></iframe>');
+        vidWrapper.attr('src', vidLink);
+        
+        $.blockUI({ 
+          message: vidWrapper,
+          overlayCSS: {
+            "backgroundColor": "#444",
+            "opacity": "0.4",
+            "cursor": "pointer"
+          },
+          css:{ 
+            "top": "20%",
+            "left": ($(window).width() - 640) /2 + 'px',
+            "width": '640px'}
+        });
+        $('.blockOverlay').click($.unblockUI);
+        
+      });
+    });
+  }
   
 })(jQuery);
 
@@ -67,6 +94,7 @@
       removeHyperlinks(_nav);
       accordion(_nav);
       categoryOrder(_nav);
+      
     });
   };
   
@@ -113,4 +141,5 @@
        });
     }
   }
+  
 })(jQuery);

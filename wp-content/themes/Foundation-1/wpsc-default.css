@@ -54,11 +54,13 @@ Author URI: http://instinct.co.nz
 #default_products_page_container .wpsc_page_numbers_top {
 	margin-bottom:10px;	
 	text-align: center;
+	float:right;
 }
 
 #default_products_page_container .wpsc_page_numbers_bottom {
 	margin-top:20px;
 	text-align: center;
+	float:right;
 }
 
 .wpsc_category_grid_item {
@@ -74,11 +76,19 @@ Author URI: http://instinct.co.nz
 }
 
 
-#default_products_page_container .wpsc_page_numbers_top a:link, #default_products_page_container .wpsc_page_numbers_top a:visited, #default_products_page_container .wpsc_page_numbers_bottom a:link, #default_products_page_container .wpsc_page_numbers_bottom a:visited {
-	padding:5px 4px;
-
+#default_products_page_container .wpsc_page_numbers_top a:link, 
+#default_products_page_container .wpsc_page_numbers_top a:visited, 
+#default_products_page_container .wpsc_page_numbers_bottom a:link, 
+#default_products_page_container .wpsc_page_numbers_bottom a:visited {
+	padding: 3px 5px;
 }
 
+#default_products_page_container .wpsc_page_numbers_top a{
+/*  border: 1px solid #CCC;
+  margin-right: 5px;
+  background: #181818;
+  color: white;
+*/}
 
 #default_products_page_container .wpsc_page_numbers_top a:hover, #default_products_page_container .wpsc_page_numbers_top a:active, #default_products_page_container .wpsc_page_numbers_bottom a:hover, #default_products_page_container .wpsc_page_numbers_bottom a:active {
 

@@ -32,6 +32,7 @@
 	<![endif]-->
 	
 	<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyBrmySoU4kGHUJjGxj9Ewgsh61QU3m1Hic&sensor=true" type="text/javascript"></script>
+	
 </head>
 
 <body <?php body_class(); ?>>

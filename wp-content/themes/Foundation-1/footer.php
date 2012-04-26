@@ -69,6 +69,7 @@
   	<script src="<?php bloginfo( 'template_directory' ); ?>/javascripts/forms.jquery.js"></script>
   	<script src="<?php bloginfo( 'template_directory' ); ?>/javascripts/jquery.customforms.js"></script>
   	<script src="<?php bloginfo( 'template_directory' ); ?>/javascripts/jquery.placeholder.min.js"></script>
+  	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/javascripts/jquery.blockUI.js"></script>
   	<script src="<?php bloginfo( 'template_directory' ); ?>/javascripts/custom.js"></script>
   	<!-- End Combine and Compress These JS Files -->
   	<script src="<?php bloginfo( 'template_directory' ); ?>/javascripts/app.js"></script>

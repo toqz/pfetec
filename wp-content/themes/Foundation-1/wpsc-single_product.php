@@ -116,7 +116,7 @@
 								<strong><?php echo wpsc_custom_meta_name(); ?>: </strong><?php echo wpsc_custom_meta_value(); ?><br />
 							<?php endwhile; ?>
 						</div><!--close custom_meta-->
-                        <?php endif; ?>
+              <?php endif; ?>
 						<?php
 						/**
 						 * Form data
@@ -167,13 +167,13 @@
 							 */
 							?>
 							<?php if(wpsc_has_multi_adding()): ?>
-                            	<fieldset><legend><?php _e('Quantity', 'wpsc'); ?></legend>
+            	<fieldset><legend><?php _e('Quantity', 'wpsc'); ?></legend>
 								<div class="wpsc_quantity_update">
-								<input type="text" id="wpsc_quantity_update_<?php echo wpsc_the_product_id(); ?>" name="wpsc_quantity_update" size="2" value="1" />
-								<input type="hidden" name="key" value="<?php echo wpsc_the_cart_item_key(); ?>"/>
-								<input type="hidden" name="wpsc_update_quantity" value="true" />
-                                </div><!--close wpsc_quantity_update-->
-                                </fieldset>
+  								<input type="text" id="wpsc_quantity_update_<?php echo wpsc_the_product_id(); ?>" name="wpsc_quantity_update" size="2" value="1" />
+  								<input type="hidden" name="key" value="<?php echo wpsc_the_cart_item_key(); ?>"/>
+  								<input type="hidden" name="wpsc_update_quantity" value="true" />
+                </div><!--close wpsc_quantity_update-->
+              </fieldset>
 							<?php endif ;?>
 	
 							<!--sharethis-->
