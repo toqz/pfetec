@@ -447,6 +447,40 @@ table.list_productdisplay p.soldout {
 	position:relative;	
 }
 
+.single_product_display .img-container img{
+  box-shadow: 0px 0px 3px #999;
+  padding: 5px;
+  background: #F1F1F1;
+}
+
+.single_product_display .imgs-thumb{
+  padding: 15px 0;
+  text-align: center;
+}
+
+.single_product_display .imgs-thumb .imgs-thumb-center{
+  margin-left: auto;
+ 	margin-right: auto;
+ 	display: table;
+}
+
+.single_product_display .imgs-thumb .imgs-thumb-center a{
+  display: block;
+  float: left;
+  margin-right: 10px;
+  padding: 5px;
+  border:1px solid #FFF;
+  width: 75px;
+}
+
+.single_product_display .imgs-thumb a:hover{
+  background: #F1F1F1;
+}
+
+.single_product_display .imgs-thumb .imgs-thumb-center a img{
+  width: 80%;
+}
+
 .imagecol {
   position: relative;
   margin: 0 5px 30px 0;

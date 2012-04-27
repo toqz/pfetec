@@ -1063,7 +1063,6 @@ function wpsc_the_product_image( $width='', $height='', $product_id='' ) {
 	if ( empty( $product_id ) )
 		$product_id = get_the_ID();
 
-
 	$product = get_post( $product_id );
 
 	if ( $product->post_parent > 0 )
@@ -1078,11 +1077,10 @@ function wpsc_the_product_image( $width='', $height='', $product_id='' ) {
 				'order' => 'ASC'
 			) );
 
-
 	$post_thumbnail_id = get_post_thumbnail_id( $product_id );
 
 	$src = wp_get_attachment_image_src( $post_thumbnail_id, 'large' );
-
+	
 	if ( ! empty( $src ) && is_string( $src[0] ) ) {
 		$src = $src[0];
 	} elseif ( ! empty( $attached_images ) ) {
@@ -1097,6 +1095,21 @@ function wpsc_the_product_image( $width='', $height='', $product_id='' ) {
 	$src = apply_filters( 'wpsc_product_image', $src );
 
 	return $src;
+}
+
+function wpsc_the_product_images($product_id=''){
+  
+	if ( empty( $product_id ) )
+		$product_id = get_the_ID();
+		
+  $args = array( 'post_type' => 'attachment', 'numberposts' => -1, 'post_status' => null, 'post_parent' => $product_id );
+  $attachments = get_posts($args);
+  
+  if ($attachments) {
+  	foreach ( $attachments as $attachment ) {
+      echo '<a href="javascript:void(0);" data-full-img-link="'. wp_get_attachment_url( $attachment->ID ) .'">'. wp_get_attachment_image($attachment->ID) .'</a>';
+  	}
+  }
 }
 
 /**

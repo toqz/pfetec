@@ -47,11 +47,21 @@
     }
     
     initVideos();
+    
+    // single product thumbnails
+    if ( $('.imgs-thumb').length > 0 ){
+      // var img = $('#img-container');
+      // var thumb = $('imgs-thumb');
+      
+      initProductThumbs( $('#img-container'), $('#imgs-thumb') );
+      
+    }
+
   });
   
   // Init product videos
   var initVideos = function(){
-    // alert('initVideos')
+
     var videos = $('[data-video-src]');
     videos.each(function(i, v){
       $(v).click(function(){
@@ -73,6 +83,28 @@
         });
         $('.blockOverlay').click($.unblockUI);
         
+      });
+    });
+  }
+  
+  // img thumbs
+  var initProductThumbs = function(imgPlaceholder, thumbContainer){
+
+    if( imgPlaceholder===undefined || imgPlaceholder==='' || thumbContainer===undefined || thumbContainer==='' ) return;
+    
+    var thumbs = thumbContainer.find('[data-full-img-link]');
+    if(thumbs.length===1){
+      thumbContainer.remove();
+      return;
+    }
+    
+    thumbs.find('[data-full-img-link]').each(function(i, thumb){
+      var _thumb = $(thumb);
+      var bigImg = _thumb.data('fullImgLink');
+      
+      // Bind Event
+      _thumb.click(function(e){
+        imgPlaceholder.find('img').attr('src', bigImg);
       });
     });
   }
