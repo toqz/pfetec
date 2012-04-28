@@ -7,7 +7,7 @@
       <div class="row">
           <div class="twelve columns">
               <h3>Products</h3>
-              <!-- <p><?php the_title(); ?></p>   -->  
+              <p></p>
           </div>
       </div>
   </div>
@@ -23,8 +23,18 @@
 
 	<!-- The very first "if" tested to see if there were any Posts to -->
 	<!-- display.  This "else" part tells what do if there weren't any. -->
-	<div class="alert-box error">Sorry, the page you requested was not found</div>
-
+	<!-- <div class="alert-box error">Sorry, the page you requested was not found</div> -->
+	<div class="product content">
+	  <div id="default_products_page_container" class="row">
+	    <?php wpsc_output_breadcrumbs(); ?>
+	    <?php include('wpsc-sidebar-list.php'); ?>
+	    
+	    <div class="eight columns main">
+	      <div class="no-product">
+	        <h2>No product found on this category</h2>
+	      </div>
+	    </div>
+	  </div>
+  </div>
 <!--End the loop -->
 <?php endif; ?>
-	

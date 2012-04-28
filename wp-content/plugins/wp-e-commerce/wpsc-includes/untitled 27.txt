@@ -1,0 +1,4 @@
+template Heirarchy
+
+full-content.php
+  

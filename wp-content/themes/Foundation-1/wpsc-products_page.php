@@ -7,7 +7,7 @@ $image_width = get_option('product_image_width');
 ?>
 <div id="default_products_page_container" class="row">
 
-<?php wpsc_output_breadcrumbs(); ?>
+  <?php wpsc_output_breadcrumbs(); ?>
 	
 	<?php do_action('wpsc_top_of_products_page'); // Plugin hook for adding things to the top of the products page, like the live search ?>
 	

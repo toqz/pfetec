@@ -1,4 +1,4 @@
-
+<h1>Loop-page.php</h1>
 <!-- Start the Loop -->
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   
@@ -24,18 +24,8 @@
 	<!-- The very first "if" tested to see if there were any Posts to -->
 	<!-- display.  This "else" part tells what do if there weren't any. -->
 	<!-- <div class="alert-box error">Sorry, the page you requested was not found</div> -->
-	<div class="product content">
-	  <div id="default_products_page_container" class="row">
-	    <?php wpsc_output_breadcrumbs(); ?>
-	    <?php include('wpsc-sidebar-list.php'); ?>
-	    
-	    <div class="eight columns main">
-	      <div class="no-product">
-	        <h2>No product found on this category</h2>
-	      </div>
-	    </div>
-	  </div>
-  </div>
+  <?php include('page-not-found.php'); ?>
+  
 <!--End the loop -->
 <?php endif; ?>
 	

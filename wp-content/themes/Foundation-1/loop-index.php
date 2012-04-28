@@ -1,11 +1,4 @@
-<!-- <div class="product-banner">    
-  <div class="row">
-    <div class="twelve columns">
-      <h3>OUR products</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec dui urna. Integer vel arcu id nisi aliquet lobortis non sit amet tellus. Nunc in ultricies ligula. Vestibulum id nunc et leo laoreet aliquet sit amet non lectus. Curabitur ac diam odio, in pretium est. </p>    
-    </div>
-  </div>
-</div> -->
+<h1>Loop-index.php</h1>
 <div class="content news">
   <div class="row">
   

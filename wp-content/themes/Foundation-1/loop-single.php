@@ -1,3 +1,4 @@
+<h1>Loop-single.php</h1>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <div class="product-banner">    
   <div class="row">
@@ -14,8 +15,6 @@
     <div class="eight columns">
       
       <!-- Start the Loop -->
-    	
-
     		<!-- Begin the first article -->
     		<div class="article">
 
@@ -41,9 +40,6 @@
     		<!-- Begin Comments -->
     	    <?php comments_template( '', true ); ?>
     	    <!-- End Comments -->
-
-    	
-    	
     </div>
     <!-- End: Left Columns -->
     
