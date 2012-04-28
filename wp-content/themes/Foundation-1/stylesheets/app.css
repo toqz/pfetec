@@ -142,7 +142,8 @@
 	-------------------------------------------------- */
 	.product-banner{
 	  background: url("../images/misc/product-banner-bg.png") repeat-x left center;
-	  height:170px;
+	  height:82px;
+	  border-top: 1px solid #AA1919;
 	}
 	.product-banner .row{
 	  padding:20px 0;
@@ -218,6 +219,11 @@
   .sidebar ul ul li > a.selected{
     background: url("../images/misc/icons-sprite.png") no-repeat scroll 32px -194px;
   }
+  
+  .about-us .sidebar ul ul li > a.selected{
+    background: url("../images/misc/icons-sprite.png") no-repeat scroll 65px -164px
+  }
+  
   .sidebar ul ul li a{
     color: #747474;
     font-size: 120%;
@@ -518,6 +524,11 @@
   
   .contact .mail {
     background-position: -296px -262px;
+  }
+  
+  .contact .mail a,
+  .contact .mail a:hover{
+    color: #F53B3B;
   }
   
   /* Contact Form */

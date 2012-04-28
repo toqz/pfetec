@@ -5,15 +5,15 @@ Template Name: Full Content
 ?>
 <?php get_header(); ?>
 
-<?php
-  // Wordpress Pages
-  if( is_front_page() ){
-    get_template_part( 'home', 'page' );
-  }elseif( is_page(array(71,241,260,270)) ){
-    get_template_part( 'about', 'page' ); 
-  }elseif( is_page(74) ){
-    get_template_part( 'contact', 'page' );
-  }
+  <?php
+    // Wordpress Pages
+    if( is_front_page() ){
+      get_template_part( 'home', 'page' );
+    }elseif( is_page(array(71,241,260,270)) ){
+      get_template_part( 'about', 'page' ); 
+    }elseif( is_page(74) ){
+      get_template_part( 'contact', 'page' );
+    }
   
 ?>
 	

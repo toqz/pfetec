@@ -1,8 +1,7 @@
 <div class="product-banner">    
   <div class="row">
     <div class="twelve columns">
-      <h3>Latest News</h3>
-      <p>Latest News Headlines</p>
+      <h3>News</h3>
     </div>
   </div>
 </div>
@@ -10,7 +9,6 @@
 <!-- Start the Loop -->
 <div class="content">
   <div class="row">
-    
 
     <div class="eight columns">
 

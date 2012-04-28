@@ -3,8 +3,30 @@
           <div class="footer">
               <div class="row">
                   <div class="four columns">
-                      <h5>WHAT'S NEW</h5>                    
-                      <div class="row whats-new">
+                      <h5>WHAT'S NEW</h5>
+                      <?php 
+                        $args = array(
+                          'numberposts' => 2,
+                          'offset'      => 0,
+                          'category'    => "news",
+                          'orderby'     => 'post_date',
+                          'order'       => 'DESC',
+                          'post_type'   => 'post',
+                          'post_status' => 'publish' ); 
+                        
+                        $postArray = get_posts( $args );
+                        
+                        foreach( $postArray as $news): ?>
+                          
+                          <div class="row whats-new">
+                              <div class="news-title"><?php echo $news->post_title; ?></div> 
+                              <p><?php echo substr( $news->post_content, 0, 100);  ?></p>
+                              <a href="<?php echo $news->guid; ?>" class="read-more">read more</a>
+                          </div>
+                          
+                      <?php endforeach; ?>
+                                       
+                      <!-- <div class="row whats-new">
                           <div class="news-title">Lorem ipsum dolor sit amet</div> 
                           <p>Consectetur adipiscing elit. Nulla venenatis nisi dolor, et malesuada ligula. Nullam placerat felis odio. </p>
                           <a href="#" class="read-more">read more</a>
@@ -13,7 +35,7 @@
                           <div class="news-title">Lorem ipsum dolor sit amet</div>
                           <p>Consectetur adipiscing elit. Nulla venenatis nisi dolor, et malesuada ligula. Nullam placerat felis odio. </p>
                           <a href="#" class="read-more">read more</a>
-                      </div>
+                      </div> -->
                   </div>
                   <div class="eight columns">
                     <div class="row">

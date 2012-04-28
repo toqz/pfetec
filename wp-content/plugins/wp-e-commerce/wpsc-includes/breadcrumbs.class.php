@@ -101,21 +101,21 @@ function wpsc_output_breadcrumbs( $options = null ) {
 	
 	// Home Page Crumb
 	// If home if the same as products page only show the products-page link and not the home link
-	if ( get_option( 'page_on_front' ) != $products_page_id && $options['show_home_page'] ) {
+  // if ( get_option( 'page_on_front' ) != $products_page_id && $options['show_home_page'] ) {
 		$output .= $options['before-crumb'];
 		$output .= '<a class="wpsc-crumb" id="wpsc-crumb-home" href="' . get_option( 'home' ) . '">' . get_option( 'blogname' ) . '</a>';
 		$output .= $options['after-crumb'];
-	}
+  // }
 	
 	// Products Page Crumb
-	if ( $options['show_products_page'] ) {
-		if ( !empty( $output ) ) {
-			$output .= $options['crumb-separator'];
-		}
-		$output .= $options['before-crumb'];
-		$output .= '<a class="wpsc-crumb" id="wpsc-crumb-' . $products_page_id . '" href="' . $filtered_products_page['url'] . '">' . $filtered_products_page['name'] . '</a>';
-		$output .= $options['after-crumb'];
-	}
+  // if ( $options['show_products_page'] ) {
+  //  if ( !empty( $output ) ) {
+  //    $output .= $options['crumb-separator'];
+  //  }
+  //  $output .= $options['before-crumb'];
+  //  $output .= '<a class="wpsc-crumb" id="wpsc-crumb-' . $products_page_id . '" href="' . $filtered_products_page['url'] . '">' . $filtered_products_page['name'] . '</a>';
+  //  $output .= $options['after-crumb'];
+  // }
 	
 	// Remaining Crumbs
 	while ( wpsc_have_breadcrumbs() ) {

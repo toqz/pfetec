@@ -47,11 +47,11 @@
                   <div class="row">
                       <div class="main-nav">
                         <!-- <?php wp_nav_menu( array( 'theme_location' => 'header-menu','menu_class' => 'nav-bar', 'container' => 'div') ); ?>  -->   
-                        <div class="two columns"><a href="<?php bloginfo( 'url' ); ?>">HOME</a></div>
-                        <div class="two columns"><a href="<?php bloginfo( 'url' ); ?>/?page_id=71">ABOUT US</a></div> 
-                        <div class="three columns"><a href="<?php bloginfo( 'url' ); ?>/?wpsc-product=product-home">OUR PRODUCTS</a></div>
-                        <div class="two columns"><a href="<?php bloginfo( 'url' ); ?>/?cat=45">NEWS</a></div>
-                        <div class="three columns"><a href="<?php bloginfo( 'url' ); ?>/?page_id=74">CONTACT US</a></div>
+                        <div class="two columns"><a href="<?php bloginfo( 'url' ); ?>" class="<?php if(is_front_page()) echo "selected"; ?>">HOME</a></div>
+                        <div class="two columns"><a href="<?php bloginfo( 'url' ); ?>/?page_id=71" class="<?php if( is_page(array(71,241,260,270)) ) echo "selected"; ?>">ABOUT US</a></div> 
+                        <div class="three columns"><a href="<?php bloginfo( 'url' ); ?>/?wpsc-product=product-home" class="<?php if(get_post_type() == 'wpsc-product') echo "selected"; ?>" >OUR PRODUCTS</a></div>
+                        <div class="two columns"><a href="<?php bloginfo( 'url' ); ?>/?cat=45" class="<?php if(is_category("news")) echo "selected"; ?>">NEWS</a></div>
+                        <div class="three columns"><a href="<?php bloginfo( 'url' ); ?>/?page_id=74" class="<?php if(is_page(74)) echo "selected"; ?>">CONTACT US</a></div>
                       </div>
                   </div>
               </div>

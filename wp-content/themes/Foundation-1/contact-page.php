@@ -4,8 +4,7 @@
 <div class="product-banner">    
   <div class="row">
     <div class="twelve columns">
-      <h3>Contact Us</h3>
-      <p><?php the_title(); ?> </p>
+      <h3><?php the_title(); ?></h3>
     </div>
   </div>
 </div>
