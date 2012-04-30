@@ -18,7 +18,7 @@
 
         <div class="row news">
           <h2> <?php the_title(); ?> </h2>
-          <p><?php the_content(); ?></p>
+          <p> <?php the_content(); ?> </p>
           <a href="<?php the_permalink() ?>" class="read-more">read more</a>
         </div>
 

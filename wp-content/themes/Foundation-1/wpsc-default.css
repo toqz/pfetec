@@ -448,9 +448,9 @@ table.list_productdisplay p.soldout {
 }
 
 .single_product_display .img-container img{
-  box-shadow: 0px 0px 3px #999;
+/*  box-shadow: 0px 0px 3px #999;
   padding: 5px;
-  background: #F1F1F1;
+  background: #F1F1F1;*/
 }
 
 .single_product_display .imgs-thumb{

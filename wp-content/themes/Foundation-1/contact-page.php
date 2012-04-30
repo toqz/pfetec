@@ -9,14 +9,14 @@
   </div>
 </div>
 
-<?php
-	if ( function_exists( 'wpcf7_enqueue_scripts' ) ) {
-		wpcf7_enqueue_scripts();
-		wpcf7_enqueue_styles();
-	}
-?>
+  <?php
+  	if ( function_exists( 'wpcf7_enqueue_scripts' ) ) {
+  		wpcf7_enqueue_scripts();
+  		wpcf7_enqueue_styles();
+  	}
+  ?>
 
-      <?php the_content(); ?>
+  <?php the_content(); ?>
   
 <!-- Stop The Loop (but note the "else:" - see next line). -->
 <?php endwhile; else: ?>

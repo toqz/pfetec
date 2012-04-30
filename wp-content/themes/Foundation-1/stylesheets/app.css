@@ -347,23 +347,27 @@
     margin-bottom: 0;
     line-height: 160%;
     font-size: 110%;
+    list-style: square;
+    margin-left: 25px;
   }
   .single_product_display .sub-info p{
     line-height: 140%;
     font-family: 'Istok Web', sans-serif;
     font-size: 110%;
   }
-  .single_product_display .sub-info ul li::before{
-    content: "- ";
-  }
   .single_product_display .sub-info dl{
     font-size: 110%;
     line-height: 160%;
     margin-bottom:15px;
+    overflow:hidden;
   }
   .single_product_display .sub-info dl dt{
     float: left;
     font-weight: bold;
+    width: 230px;
+  }
+  .single_product_display .sub-info dl dd{
+    margin-left: 230px;
   }
   .single_product_display .downloads a.dl-pdf,
   .single_product_display .downloads a.dl-pdf:hover{
