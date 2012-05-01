@@ -465,8 +465,19 @@
   }
   
   /* NEWS */
-	.content.news{
-	  
+	.content .news{
+	  margin-right:100px;
+	}
+	.content .news h2{
+	  font-size: 130%;
+	}
+	.content .news h2 a{
+	  color: #181818;
+	  font-weight: bold;
+	}
+	.content .news h2 small{
+	  font-size: 70%;
+    display: block;
 	}
 	  
 	.content.news .article h2 a,
@@ -638,3 +649,117 @@
   right: 30px;
   top: 30px;
 }
+
+/* Accordion Slider
+ =================================*/
+#accordion-slider{
+  background: #555;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  height: 668px;
+}
+
+#accordion-slider .slide{
+  background: #aaa;
+  display: block;
+  overflow: hidden;
+  padding: 0;
+  float: left;
+  width: 160px;
+  height: 500px;
+  cursor:pointer;
+}
+
+#accordion-slider .slide .slide-data{
+  background: #FFF;
+  color #FFF;
+  padding: 15px 10px;
+  opacity: .4;
+  position:absolute;
+  bottom:30px;
+}
+
+#accordion-slider .slide img{
+  width: 638px;
+}
+  
+#accordion-slider .slide img a{}  
+  
+/* Calendar
+ =================================*/
+#calendar-2{
+  border-bottom: 1px solid #333;
+  margin-bottom:30px;
+}
+#calendar_wrap{}
+
+#wp-calendar{
+  background: transparent;
+  border: 0 none;
+  font-size:110%;
+}
+#wp-calendar thead{
+  background: transparent;
+}
+#wp-calendar caption{
+  font-size: 120%;
+  padding: 10px 0;
+  text-align: right;
+  color: #4D4D4D;
+}
+#wp-calendar thead tr th{
+  color: #D13030;
+  font-size: 110%;
+}
+#wp-calendar tr{}
+#wp-calendar tbody tr td{
+  padding: 7px 8px;
+  font-size: 110%;
+  text-align: center;
+}
+#wp-calendar tbody tr td a{
+  display:block;
+}
+#wp-calendar tbody tr td a:hover{
+  cursor: pointer;
+  color: #D13030; 
+}
+#wp-calendar tbody tr:nth-child(even){
+  background: 0 none;
+}
+#wp-calendar tfoot tr,
+#wp-calendar thead tr{
+  border:1px solid #EEE;
+}
+#wp-calendar tfoot tr td{
+  padding: 8px 10px;
+}
+  
+/* Calendar
+ =================================*/  
+#wpsc_categorisation-2{
+  border-bottom:1px solid #333;
+  margin-bottom:30px;
+}
+.widget ul.wpsc_categories,
+.widget ul.wpsc_categories li a{
+  font-size:100%;
+  color:#D13030;
+  padding:5px 0;
+}
+.widget ul.wpsc_categories li a:hover{
+  text-decoration:underline;
+}
+.widget ul.wpsc_categories ul{
+  margin-left:20px;
+}
+  
+  
+  
+  
+  
+  
+  
+  

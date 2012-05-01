@@ -25,17 +25,7 @@
                           </div>
                           
                       <?php endforeach; ?>
-                                       
-                      <!-- <div class="row whats-new">
-                          <div class="news-title">Lorem ipsum dolor sit amet</div> 
-                          <p>Consectetur adipiscing elit. Nulla venenatis nisi dolor, et malesuada ligula. Nullam placerat felis odio. </p>
-                          <a href="#" class="read-more">read more</a>
-                      </div>
-                      <div class="row whats-new">
-                          <div class="news-title">Lorem ipsum dolor sit amet</div>
-                          <p>Consectetur adipiscing elit. Nulla venenatis nisi dolor, et malesuada ligula. Nullam placerat felis odio. </p>
-                          <a href="#" class="read-more">read more</a>
-                      </div> -->
+
                   </div>
                   <div class="eight columns">
                     <div class="row">
@@ -87,6 +77,7 @@
   	<!-- Combine and Compress These JS Files -->
   	<script src="<?php bloginfo( 'template_directory' ); ?>/javascripts/jquery.min.js"></script>
   	<script src="<?php bloginfo( 'template_directory' ); ?>/javascripts/jquery.reveal.js"></script>
+  	<script src="<?php bloginfo( 'template_directory' ); ?>/javascripts/jquery.kwicks-1.5.1.pack.js"></script>
     <script src="<?php bloginfo( 'template_directory' ); ?>/javascripts/jquery.orbit-1.3.0.js"></script>
   	<script src="<?php bloginfo( 'template_directory' ); ?>/javascripts/forms.jquery.js"></script>
   	<script src="<?php bloginfo( 'template_directory' ); ?>/javascripts/jquery.customforms.js"></script>

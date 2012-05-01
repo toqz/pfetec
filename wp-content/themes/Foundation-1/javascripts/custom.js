@@ -10,7 +10,9 @@
   $(function(){
     
     // Sidemenu
-    $('ul.wpsc_categories').formatSidemenu();
+    if($('ul.wpsc_categories').length>0){
+      $('ul.wpsc_categories').formatSidemenu();
+    }
      
      //Breadcrumbs
      var crumb = $('.wpsc-breadcrumbs a');
@@ -50,12 +52,13 @@
     
     // single product thumbnails
     if ( $('.imgs-thumb').length > 0 ){
-      // var img = $('#img-container');
-      // var thumb = $('imgs-thumb');
-      
       initProductThumbs( $('#img-container'), $('#imgs-thumb') );
-      
     }
+    
+    $('#accordion-slider').kwicks({
+      max : 450,
+      spacing : 2
+    });
 
   });
   
@@ -121,7 +124,6 @@
       if( typeof _nav=='undefined' || _nav=='' || _nav===null || _nav.length===0 ){
         return false;
       }
-    
       hideOtherCategory(_nav);
       removeHyperlinks(_nav);
       accordion(_nav);
@@ -163,11 +165,11 @@
       len = order.length,
       arrCats = _nav.children(),
       orderedCats=[];
-    
+
     for(i=0; i<len; i++){
       $.each(arrCats, function(k, v){
          var cat = $(v).children('.wpsc_category_link').attr('title');
-         if( cat.toLowerCase()==order[i].toLowerCase() ){
+         if( cat && cat.toLowerCase()==order[i].toLowerCase() ){
            _nav.append(v);
          }
        });

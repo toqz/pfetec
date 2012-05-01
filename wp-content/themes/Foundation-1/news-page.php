@@ -9,17 +9,30 @@
 <!-- Start the Loop -->
 <div class="content">
   <div class="row">
+    
 
     <div class="eight columns">
 
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>    
-
-        <div class="row news">
-          <h2> <?php the_title(); ?> </h2>
-          <p><?php the_content(); ?></p>
-          <a href="<?php the_permalink() ?>" class="read-more">read more</a>
-        </div>
-
+        
+        <?php 
+          $id = the_ID();
+          $post = get_post( $id );
+          if( $post->post_status=="publish" ){             
+        ?>     
+             <div class="row news">
+               <div class="ten columns">  
+                 <h2>
+                   <a href="<?php echo $post->guid; ?>"><?php echo $post->post_title; ?></a>
+                   <small><?php echo $post->post_date ?></small>
+                 </h2>
+                 <p><?php echo $post->post_excerpt; ?></p>
+                 <a href="<?php ?>" class="read-more">read more</a>
+               </div>
+             </div>
+        <?php  }  ?>
+            
+        
        <!-- End: news -->
        
       <!-- Stop The Loop (but note the "else:" - see next line). -->
@@ -32,6 +45,10 @@
 
     </div>
     <!-- End: eight columns -->
+    
+    <div class="four columns">
+      <?php include('sidebar-news.php'); ?>
+    </div>
    
   </div>
   <!-- End: row news -->

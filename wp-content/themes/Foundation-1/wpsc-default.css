@@ -443,14 +443,11 @@ table.list_productdisplay p.soldout {
 
 .single_product_display {
 	margin-bottom:20px;
-	padding:10px;
 	position:relative;	
 }
 
 .single_product_display .img-container img{
-/*  box-shadow: 0px 0px 3px #999;
-  padding: 5px;
-  background: #F1F1F1;*/
+
 }
 
 .single_product_display .imgs-thumb{
@@ -504,11 +501,12 @@ table.list_productdisplay p.soldout {
 }
 
 
-.single_product_display .product_description, .single_product_display .single_additional_description {
+.single_product_display .product_description, 
+.single_product_display .single_additional_description {
 	font-size:14px;
 	line-height:1.2em;
 	margin:0 0 10px 0;
-	padding:0;	
+	padding:0;
 }
 
 .single_product_display form.product_form fieldset, #content .single_product_display form.product_form fieldset {

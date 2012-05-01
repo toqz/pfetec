@@ -5,12 +5,14 @@
  * @since 3.8
  */
 ?>
-<div class="row catergory-list">
+<ul class="row catergory-list" id="accordion-slider">
 	<?php wpsc_start_category_query(array('category_group'=> get_option('wpsc_default_category'), 'show_thumbnails'=> 1)); ?>
-    <div class="six columns brand-logo">
-			<a href="<?php wpsc_print_category_url();?>" class="wpsc_category_grid_item" title="<?php wpsc_print_category_name(); ?>">
-  			<?php wpsc_print_category_image(get_option('category_image_width'),get_option('category_image_height')); ?>
-  		</a>
-    </div>
+    <li class="slide">
+      <?php wpsc_print_category_image(get_option('category_image_width'), get_option('category_image_height')); ?>
+      <!-- <a href="<?php wpsc_print_category_url();?>" class="slide-image" title="<?php wpsc_print_category_name(); ?>"><?php wpsc_print_category_name(); ?></a> -->
+      <div class="slide-data">
+        <a href="<?php wpsc_print_category_url();?>" class="slide-image" title="<?php wpsc_print_category_name(); ?>"><h4><?php wpsc_print_category_name(); ?></h4></a>
+      </div>
+    </li>
 	<?php wpsc_end_category_query(); ?>
-</div>
+</ul>
