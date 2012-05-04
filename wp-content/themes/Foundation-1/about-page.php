@@ -21,10 +21,8 @@
           <li>
             <a href="javascript:void(0);">About Us</a>
             <ul>
-              <li><a href="http://pfetec.com/wp/wordpress/?page_id=71" class="<?php if( is_page(71) ) echo "selected"; ?>">The Company</a></li>
-              <!-- <li><a href="http://pfetec.com/wp/wordpress/?page_id=241" class="<?php if( is_page(241) ) echo "selected"; ?>" >Our People</a></li> -->
-              <li><a href="http://pfetec.com/wp/wordpress/?page_id=260" class="<?php if( is_page(260) ) echo "selected"; ?>" >Our Suppliers</a></li>
-              <!-- <li><a href="http://pfetec.com/wp/wordpress/?page_id=270" class="<?php if( is_page(270) ) echo "selected"; ?> ">Our Clients</a></li> -->
+              <li><a href="http://pfetec.com/?page_id=71" class="<?php if( is_page(71) ) echo "selected"; ?>">The Company</a></li>
+              <li><a href="http://pfetec.com/?page_id=260" class="<?php if( is_page(260) ) echo "selected"; ?>" >Our Suppliers</a></li>
             </ul>
           </li>
         </ul>

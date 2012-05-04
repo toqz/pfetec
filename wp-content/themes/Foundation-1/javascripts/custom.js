@@ -92,7 +92,6 @@
   
   // img thumbs
   var initProductThumbs = function(imgPlaceholder, thumbContainer){
-
     if( imgPlaceholder===undefined || imgPlaceholder==='' || thumbContainer===undefined || thumbContainer==='' ) return;
     
     var thumbs = thumbContainer.find('[data-full-img-link]');
@@ -101,13 +100,15 @@
       return;
     }
     
-    thumbs.find('[data-full-img-link]').each(function(i, thumb){
-      var _thumb = $(thumb);
-      var bigImg = _thumb.data('fullImgLink');
-      
-      // Bind Event
-      _thumb.click(function(e){
-        imgPlaceholder.find('img').attr('src', bigImg);
+    thumbs.each(function(i, thumb){
+      var bigImg = $(thumb).data('fullImgLink');
+      $(thumb).click(function(e){
+        bigImgPlaceholder = imgPlaceholder.find('img');
+        bigImgPlaceholder.fadeOut(400, function(){
+          $(this).attr('src', bigImg);
+          $(this).fadeIn(400);
+        });
+        
       });
     });
   }

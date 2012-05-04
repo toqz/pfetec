@@ -215,7 +215,7 @@
 	-------------------------------------------------- */	
 	.footer{
 		background: url("../images/misc/background-sprite.png") repeat-x left -530px;
-		padding: 22px 16px;
+		padding: 22px 16px 0 16px;
  	}	
 
 /*	--------------------------------------------------

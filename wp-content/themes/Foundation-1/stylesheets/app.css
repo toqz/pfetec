@@ -466,8 +466,30 @@
   
   /* NEWS */
 	.content .news{
+	  margin-top: 30px;
 	  margin-right:100px;
 	}
+	.content.news .article{
+	  margin-top:30px;
+	}
+	.content.news .article h2.news-title{
+	  font-size: 200%;
+    color: #666;
+    text-align: left;
+    margin-bottom: 30px;
+	}
+	.content.news .article h2.news-title em{
+	  font-size: 50%;
+	  line-height:1;
+	  font-style:normal;
+	}
+	.content.news .article h2.news-title a{
+	  display:block;
+	}
+  .content.news .article .news-full{
+    margin-top:30px;
+  }
+	
 	.content .news h2{
 	  font-size: 130%;
 	}
@@ -486,7 +508,7 @@
 	}
 	.content.news .article .news-summary,
 	.content.news .article .news-full p{
-  	font-size: 140%;
+  	font-size: 120%;
     line-height: 140%;
   }
   

@@ -440,7 +440,9 @@ table.list_productdisplay p.soldout {
 #single_product_page_container {
 	position:relative;	
 }
-
+.product #single_product_page_container .main{
+/*  padding-left:4px;*/
+}
 .single_product_display {
 	margin-bottom:20px;
 	position:relative;	
